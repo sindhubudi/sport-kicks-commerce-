@@ -1,0 +1,122 @@
+/* Floating Cart Styles */
+.cart-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,123,255,0.3);
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.3s;
+}
+
+.cart-floating:hover {
+    transform: translateY(-5px);
+}
+
+.cart-icon {
+    font-size: 1.8rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Product Collection Grid */
+.product-collection {
+    padding: 100px 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.product-item {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.product-item:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.product-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 12px;
+    background: var(--dark-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cart-floating {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
